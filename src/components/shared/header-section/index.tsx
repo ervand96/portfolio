@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import HamburgerMenu from "../hamburger-menu";
 import { navbar, NavbarProps } from "../../../constatnts/navbar";
-import imageHeader from "../../../public/icons/logo.svg";
 
 import styles from "./headerSection.module.scss";
 
-export default function HeaderSection() {
+export default function Header() {
   const [activeHamburger, setActiveHamburger] = useState<boolean>(true);
   const ref = useRef<HTMLDivElement>(null);
   const openHamburger = (): void => {
@@ -38,10 +37,9 @@ export default function HeaderSection() {
       <div className={styles.navbar}>
         <div className={styles.logoSection}>
           <div className={styles.logo}>
-            <img src={imageHeader} alt="imageHeader" width={60} height={60} />
           </div>
           <div className={styles.logoText}>
-            <span>ERVAND HARUTYUNYAN</span>
+            <span></span>
           </div>
         </div>
         <div className={styles.navbarSection}>
@@ -55,7 +53,7 @@ export default function HeaderSection() {
                 <li key={index}>{item.title}</li>
               ))}
             </div>
-          </ul>
+          </ul> 
         </div>
       </div>
     </div>
